@@ -1,11 +1,12 @@
 Name: system-base
-Version: 7.4.0
+Version: 7.4.2
 Release: 1%{dist}
 Summary: Initializes the system environment
 License: GPLv3 or later
 Group: Applications/System
 Source: %{name}-%{version}.tar.gz
 # Upgrade path with new security driver
+Obsoletes: clearos-base
 Provides: clearos-base
 # Pull in security driver
 Requires: system-base-security
@@ -14,13 +15,11 @@ Requires: gnupg2
 Requires: grub2
 Requires: kernel >= 3.10.0
 Requires: man-db
-Requires: audit
 Requires: man
 Requires: mlocate
 Requires: nano
 Requires: openssh-clients
 Requires: pam
-Requires: selinux-policy-targeted
 Requires: sudo
 Requires: rsyslog
 Requires: yum
